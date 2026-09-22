@@ -35,7 +35,7 @@ export function Contact() {
           lead="Donations and partnerships are handled directly by our team. Write to us with the form, by email, or by phone."
         />
 
-        <section className={sectionSpacing} style={{ backgroundColor: ink[50] }}>
+        <section className={sectionSpacing} >
           <div className="wrap">
             <div className="grid gap-8 lg:grid-cols-5 lg:gap-10">
               <Reveal className="lg:col-span-2">
