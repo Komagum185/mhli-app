@@ -14,16 +14,17 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-forest-deep pt-10 pb-5 text-cream-dim sm:pt-16 sm:pb-8">
+    <footer className="relative pt-10 pb-5 text-cream-dim sm:pt-16 sm:pb-8"
+    style={{ backgroundColor: `${ink[900]}F2`, borderColor: `${ink[300]}26` }}
+    >
       <div
         aria-hidden="true"
         className="absolute inset-x-0 top-0 h-0.75 bg-clay"
       />
 
-      {/* Two columns on mobile: brand on top, contact and links side by side. */}
       <div className="wrap grid grid-cols-2 gap-x-6 gap-y-7 pb-8 sm:gap-x-8 sm:gap-y-10 sm:pb-12 md:grid-cols-[1.3fr_1fr_1fr]">
         <div className="col-span-2 md:col-span-1">
-           <div className="wrap flex items-center justify-between gap-3 py-3">
+          <div className="wrap flex items-center justify-between gap-3 py-3">
                   <Link
                     to="/"
                     aria-label={`${site.name}, home`}
