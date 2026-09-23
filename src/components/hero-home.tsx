@@ -304,7 +304,6 @@ export function HomeHero() {
             </div>
           </motion.div>
 
-          {/* Main heading */}
           <motion.div variants={itemVariants}>
             <h1 className="max-w-2xl text-balance text-4xl font-semibold leading-[1.02] tracking-[-0.03em] text-forest-deep sm:text-6xl lg:text-7xl xl:text-[5rem]">
               Care shouldn&apos;t stop
@@ -331,7 +330,6 @@ export function HomeHero() {
             </h1>
           </motion.div>
 
-          {/* Description */}
           <motion.p
             variants={itemVariants}
             className="mt-8 max-w-xl text-lg leading-8 text-ink-soft sm:text-xl"
@@ -341,24 +339,23 @@ export function HomeHero() {
             the Rwenzori region. Registered under No. {site.registration}.
           </motion.p>
 
-          {/* Actions */}
           <motion.div
             variants={itemVariants}
             className="mt-9 flex flex-col gap-3 sm:flex-row"
           >
             <Link
               to="/contact"
-              className="group inline-flex h-12 items-center justify-center gap-3 rounded-full bg-forest px-6 text-sm font-semibold text-cream shadow-[0_10px_30px_rgba(14,50,38,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest-deep hover:shadow-[0_14px_35px_rgba(14,50,38,0.22)]"
+              className="group inline-flex h-16 items-center justify-center gap-3 bg-forest px-6 text-lg font-semibold text-cream shadow-[0_10px_30px_rgba(14,50,38,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest-deep hover:shadow-[0_14px_35px_rgba(14,50,38,0.22)]"
             >Partner with us
 
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-clay text-forest transition-transform duration-300 group-hover:translate-x-0.5">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-clay text-forest transition-transform duration-300 group-hover:translate-x-0.5">
                 →
               </span>
             </Link>
 
             <Link
               to="/programs"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-forest/15 bg-stone px-6 text-sm font-semibold text-forest transition-all duration-300 hover:border-forest/30 hover:bg-white"
+              className="inline-flex h-16 items-center justify-center  border border-forest/15 bg-stone px-6 text-lg font-semibold text-forest transition-all duration-300 hover:border-forest/30 hover:bg-cream"
             >
               See our programs
             </Link>
@@ -366,7 +363,7 @@ export function HomeHero() {
 
           <motion.div
             variants={itemVariants}
-            className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs font-medium text-ink-soft"
+            className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs font-medium text-ink-soft"
           >
             <span className="flex items-center gap-2">
               <span className="h-1.5 w-1.5 rounded-full bg-clay" />
@@ -389,15 +386,10 @@ export function HomeHero() {
           initial={prefersReducedMotion ? false : "hidden"}
           animate="visible"
           variants={visualVariants}
-          className="relative mx-auto w-full max-w-150 lg:ml-auto"
->
+          className="relative mx-auto w-full max-w-150 lg:ml-auto"  >
+
           <HeartbeatVisual />
         </motion.div>
-      </div>
-
-      {/* Bottom transition */}
-      <div className="relative h-16 overflow-hidden">
-        <div className="absolute bottom-0 left-1/2 h-32 w-[120%] -translate-x-1/2 translate-y-24 rounded-[50%] bg-forest" />
       </div>
     </section>
   );

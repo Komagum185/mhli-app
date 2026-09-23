@@ -1,37 +1,44 @@
 
-import {useState }from "react";
+import { useState } from "react";
 import type { FormEvent } from "react";
 import { site } from "../lib/site";
 
 export function ContactForm() {
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const name = String(data.get("name") ?? "").trim();
-    const email = String(data.get("email") ?? "").trim();
-    const organization = String(data.get("organization") ?? "").trim();
-    const message = String(data.get("message") ?? "").trim();
+    const form = event.currentTarget;
+    setStatus("sending");
 
-    const subject = encodeURIComponent(`MHLI inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nOrganization: ${organization || "—"}\n\n${message}`,
-    );
-    window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
-    setStatus(
-      "Your email app should open with this message. If it does not, write to us at " +
-        site.email +
-        ".",
-    );
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${site.email}`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: new FormData(form),
+      });
+
+      if (!response.ok) {
+        throw new Error("Contact form submission failed");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4">
       <p className="text-sm text-ink-soft">
-        This form opens your email app and sends to {site.email}. Nothing is stored
-        on this website.
+        Send your message directly to the MHLI team. We will reply to the email
+        address you provide.
       </p>
+      <input type="hidden" name="_subject" value="New MHLI website inquiry" />
+      <input type="hidden" name="_captcha" value="false" />
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block text-sm font-medium text-forest-deep">
           Name
@@ -70,12 +77,17 @@ export function ContactForm() {
           className="mt-1 w-full border border-line bg-cream px-3 py-2"
         />
       </label>
-      <button type="submit" className="btn btn-primary w-fit">
-        Open email to send
+      <button type="submit" disabled={status === "sending"} className="btn btn-primary w-fit">
+        {status === "sending" ? "Sending..." : "Send message"}
       </button>
-      {status ? (
+      {status === "success" ? (
         <p role="status" className="text-sm text-forest">
-          {status}
+          Your message has been sent. Thank you for reaching out to MHLI.
+        </p>
+      ) : null}
+      {status === "error" ? (
+        <p role="alert" className="text-sm text-red-700">
+          We could not send your message right now. Please try again or email {site.email}.
         </p>
       ) : null}
     </form>

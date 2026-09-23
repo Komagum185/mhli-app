@@ -121,7 +121,7 @@ export function PrimaryButton({
     return (
         <Link
         to={to}
-        className="group inline-flex h-12 items-center justify-center gap-3 rounded-full px-6 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(10,23,18,0.25)] transition-all duration-300 hover:-translate-y-0.5"
+        className="group inline-flex h-12 items-center justify-center gap-3 px-6 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(10,23,18,0.25)] transition-all duration-300 hover:-translate-y-0.5"
         style={{ backgroundColor: onDark ? accent : ink[800] }}
         >
         {children}
@@ -150,8 +150,6 @@ export function SecondaryButton({ to, children }: { to: string; children: ReactN
     );
 }
 
-/** Subtle vertical parallax for a framed photo — used sparingly, never on
- * every image, to match Home's treatment of the terrain/program photos. */
 export function ParallaxFrame({
     src,
     alt,
@@ -250,7 +248,7 @@ export function PageHero({
         <div className="wrap relative py-16 sm:py-24">
         {eyebrow}
         <Reveal>
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.02em] text-stone sm:text-5xl sm:leading-[1.1]">
+            <h1 className="mt-2 max-w-3xl text-4xl font-semibold tracking-[-0.02em] text-stone sm:text-5xl sm:leading-[1.1]">
             {title}
             </h1>
             {lead ? (

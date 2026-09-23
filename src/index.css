@@ -180,7 +180,7 @@ html {
 }
 
 body {
-  background: var(--cream);
+  background: var(--highland);
   color: var(--ink);
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -202,8 +202,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  color: var(--forest-deep);
-  font-weight: 600;
+  color: var(--clay-soft);
+  font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.01em;
   text-wrap: balance;

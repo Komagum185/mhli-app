@@ -82,7 +82,7 @@ export function Contact() {
               </Reveal>
 
               <Reveal className="lg:col-span-3">
-                <div className="h-full rounded-[2rem] bg-white p-7 shadow-[0_20px_50px_rgba(10,23,18,0.07)] sm:p-10">
+                <div className="h-full rounded-[2rem] bg-cream p-7 shadow-[0_20px_50px_rgba(10,23,18,0.07)] sm:p-10">
                   <h2 className="text-2xl font-semibold sm:text-3xl" style={{ color: ink[800] }}>
                     Send a message
                   </h2>
