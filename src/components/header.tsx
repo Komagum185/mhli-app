@@ -1,11 +1,11 @@
 
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useId, useRef, useState } from "react";
-import { LogoMark } from "./logo-mark";
 import { navLinks } from "../lib/content";
 import { site } from "../lib/site";
 import { PrimaryButton } from "./motion-ui";
 import { accent, ink } from "../lib/utils";
+import { Logo } from "./logo";
 
 function isActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
@@ -57,18 +57,18 @@ export function Header() {
         <Link
           to="/"
           aria-label={`${site.name}, home`}
-          className={`flex min-w-0 items-center gap-3 text-white ${focusRing}`}
+          className={`flex min-w-0 items-center gap-3 text-cream ${focusRing}`}
           style={{ outlineColor: accent }}
         >
           <span style={{ color: accent }}>
-            <LogoMark className="h-8 w-8 shrink-0" />
+            <Logo className="h-8 w-8 shrink-0" />
           </span>
-          {/* <span className="font-heading text-sm leading-tight font-semibold sm:text-base">
+          <span className="font-heading text-sm leading-tight font-semibold sm:text-base">
             {site.name}
             <span className="mt-0.5 hidden text-xs font-normal sm:block" style={{ color: ink[200] }}>
               Kitswamba, Uganda
             </span>
-          </span> */}
+          </span>
         </Link>
 
         <nav

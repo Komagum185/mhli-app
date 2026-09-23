@@ -9,22 +9,27 @@ export const navLinks = [
 export const pillars = [
   {
     title: "Community Health Systems",
+    icon: "health",
     body: "Strengthening frontline facilities and community health workers so care starts close to home.",
   },
   {
     title: "Maternal, Newborn & Child Health",
+    icon: "maternal",
     body: "Working toward safe deliveries and healthy childhoods, wherever a family lives.",
   },
   {
     title: "Research & Innovation",
+    icon: "research",
     body: "Generating local evidence and implementation science to guide what actually works here.",
   },
   {
     title: "One Health & Emerging Diseases",
+    icon: "one-health",
     body: "Watching where human, animal, and environmental health meet along the Uganda–DRC border.",
   },
   {
     title: "Livelihood & Resilience",
+    icon: "livelihood",
     body: "Health and income are linked — supporting families so illness doesn't mean lost livelihood.",
   },
 ] as const;
