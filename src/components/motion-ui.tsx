@@ -224,8 +224,6 @@ export function Marquee({ items }: { items: readonly string[] }) {
     );
 }
 
-/** Dark full-bleed hero band used at the top of every interior page —
- * the internal-page counterpart to HomeHero, in the same ink palette. */
 export function PageHero({
     eyebrow,
     title,
@@ -252,7 +250,7 @@ export function PageHero({
         <div className="wrap relative py-16 sm:py-24">
         {eyebrow}
         <Reveal>
-            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.02em] text-white sm:text-5xl sm:leading-[1.1]">
+            <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.02em] text-stone sm:text-5xl sm:leading-[1.1]">
             {title}
             </h1>
             {lead ? (

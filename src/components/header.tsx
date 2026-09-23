@@ -51,7 +51,7 @@ export function Header() {
     <header
       ref={headerRef}
       className="sticky top-0 z-50 border-b backdrop-blur-md"
-      style={{ backgroundColor: `${ink[900]}F2`, borderColor: `${ink[300]}26` }}
+      style={{ backgroundColor: `${ink[900]}`, borderColor: `${ink[300]}` }}
     >
       <div className="wrap flex items-center justify-between gap-4 py-3">
         <Link

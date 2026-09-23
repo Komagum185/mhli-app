@@ -89,7 +89,7 @@ export function AboutPage() {
           <div className="mt-12 sm:mt-14">
             <PillarGrid
               items={pillars}
-              cardClassName="bg-white rounded-2xl shadow-[0_20px_50px_rgba(10,23,18,0.07)] hover:-translate-y-1 transition-transform duration-300"
+              cardClassName="bg-stone-dim rounded-2xl shadow-[0_20px_50px_rgba(10,23,18,0.07)] hover:-translate-y-1 transition-transform duration-300 text-forest"
             />
           </div>
         </div>
