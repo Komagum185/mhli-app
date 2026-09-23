@@ -50,8 +50,8 @@ export function Header() {
   return (
     <header
       ref={headerRef}
-      className="sticky top-0 z-50 border-b backdrop-blur-md"
-      style={{ backgroundColor: `${ink[900]}`, borderColor: `${ink[300]}` }}
+      className="sticky border-b top-0 z-50 backdrop-blur-md"
+      style={{ backgroundColor: `${ink[900]}`, borderColor: `${ink[600]}` }}
     >
       <div className="wrap flex items-center justify-between gap-4 py-3">
         <Link
@@ -113,7 +113,7 @@ export function Header() {
             aria-controls={panelId}
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpenedAt(open ? null : pathname)}
-            className={`inline-flex h-11 w-11 items-center justify-center rounded-full border text-white lg:hidden ${focusRing}`}
+            className={`inline-flex h-11 w-11 items-center justify-center rounded-full border text-stone lg:hidden ${focusRing}`}
             style={{ borderColor: `${ink[300]}40`, outlineColor: accent }}
           >
             <svg
