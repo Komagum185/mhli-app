@@ -560,18 +560,17 @@ export function HeartbeatVisual() {
           </div>
 
           <div className="text-right">
-            <p className="text-[9px] uppercase tracking-[0.16em] text-stone/40">
+            <p className="text-[9px] uppercase tracking-[0.16em] text-clay">
               Status
             </p>
 
-            <p className="mt-1 text-xs font-medium text-clay-soft">
+            <p className="mt-1 text-xs font-medium text-clay">
               Looking good
             </p>
           </div>
         </div>
       </motion.div>
 
-      {/* Floating heart card */}
       <motion.div
         initial={
           prefersReducedMotion
@@ -649,7 +648,6 @@ export function HeartbeatVisual() {
         </div>
       </motion.div>
 
-      {/* Floating growth card */}
       <motion.div
         initial={
           prefersReducedMotion
@@ -714,7 +712,6 @@ export function HeartbeatVisual() {
         </div>
       </motion.div>
 
-      {/* Decorative pulse rings */}
       <motion.div
         aria-hidden="true"
         animate={
@@ -730,7 +727,7 @@ export function HeartbeatVisual() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute bottom-[7%] right-[10%] h-16 w-16 rounded-full border border-gold/30"
+        className="absolute bottom-[7%] right-[10%] h-16 w-16 rounded-full border border-clay/30"
       />
 
       <div

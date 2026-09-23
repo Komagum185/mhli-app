@@ -234,7 +234,7 @@ h4 {
 
 p {
   text-wrap: pretty;
-  color: var(--ink-soft);
+  /* color: var(--ink-soft); */
 }
 
 strong,
